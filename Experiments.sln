@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryFinally", "TryFinally\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamsAndFiles", "StreamsAndFiles\StreamsAndFiles.csproj", "{7E148E26-FAF4-45BF-B7EA-384F71B48109}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MocksAndStubs", "MocksAndStubs\MocksAndStubs.csproj", "{32503199-AAE7-49B6-9DFC-D1F44E77EC24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{7E148E26-FAF4-45BF-B7EA-384F71B48109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E148E26-FAF4-45BF-B7EA-384F71B48109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E148E26-FAF4-45BF-B7EA-384F71B48109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32503199-AAE7-49B6-9DFC-D1F44E77EC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32503199-AAE7-49B6-9DFC-D1F44E77EC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32503199-AAE7-49B6-9DFC-D1F44E77EC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32503199-AAE7-49B6-9DFC-D1F44E77EC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
