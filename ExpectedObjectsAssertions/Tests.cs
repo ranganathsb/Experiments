@@ -212,6 +212,46 @@ namespace ExpectedObjectsAssertions
 		}
 	}
 
+	[TestFixture]
+	public class When_testing_equivalence_or_matching_for_partially_supplied_properties
+	{
+		private const string ExpectedName = "Expected Name";
+		private Customer _actual;
+		private ExpectedObject _expected;
+
+		[Test]
+		public void Should_flag_extra_properties_on_actual_object_as_unequal()
+		{
+			_actual = new Customer {Name = ExpectedName, PhoneNumber = "1234567890"};
+			_expected = new {Name = ExpectedName}.ToExpectedObject();
+			_expected.ShouldEqual(_actual);
+		}
+
+		[Test]
+		public void Should_flag_uninitialized_properties_on_actual_object_as_not_matching()
+		{
+			_actual = new Customer {Name = ExpectedName};
+			_expected = new {Name = ExpectedName, PhoneNumber = "1234567890"}.ToExpectedObject();
+			_expected.ShouldMatch(_actual);
+		}
+
+		[Test]
+		public void Should_flag_uninitialized_properties_on_actual_object_as_unequal()
+		{
+			_actual = new Customer {Name = ExpectedName};
+			_expected = new {Name = ExpectedName, PhoneNumber = "1234567890"}.ToExpectedObject();
+			_expected.ShouldEqual(_actual);
+		}
+
+		[Test]
+		public void Should_ignore_extra_properties_on_actual_object_when_matching()
+		{
+			_actual = new Customer {Name = ExpectedName, PhoneNumber = "1234567890"};
+			_expected = new {Name = ExpectedName}.ToExpectedObject();
+			_expected.ShouldMatch(_actual);
+		}
+	}
+
 	internal class Customer
 	{
 		public string Name { get; set; }
